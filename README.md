@@ -1,6 +1,6 @@
 # GizGoat Project
 
-GizGoat adalah platform monorepo terintegrasi yang menggabungkan sistem Artificial Intelligence, Fullstack Engineering, dan Data Science dalam satu ekosistem. Proyek ini dirancang untuk mendukung pengembangan sistem end-to-end mulai dari eksplorasi data, pelatihan model, hingga deployment aplikasi.
+GizGoat adalah platform berbasis AI yang memberikan rekomendasi kesehatan personal untuk membantu pengguna mencapai kondisi tubuh yang diinginkan. Sistem ini memanfaatkan data seperti usia, gender, durasi dan kualitas tidur, aktivitas fisik, BMI, detak jantung, langkah harian, tingkat stres, gangguan tidur, pekerjaan, serta tekanan darah sistolik dan diastolik untuk menghasilkan insight dan rekomendasi yang lebih akurat dan terarah.
 
 ---
 
