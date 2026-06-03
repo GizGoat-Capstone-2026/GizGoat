@@ -43,9 +43,3 @@ README.md
 - `AI/` — tim AI: pelatihan model, artifacts, API inferensi, notebook, dan aset data.
 - `FS/` — tim Fullstack: frontend, layanan backend, UI, dan alat deployment (masa depan).
 - `DS/` — tim Data Science: eksperimen, analisis, rekayasa fitur, dan dataset (masa depan).
-
-## Catatan
-
-- Jadikan `README.md` root ini sebagai titik masuk utama repositori.
-- Gunakan `AI/README.md` untuk detail khusus AI jika diperlukan.
-- Tambahkan `FS/` dan `DS/` saat tim-tim tersebut siap berkontribusi.
