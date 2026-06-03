@@ -1,0 +1,8 @@
+{
+    "model_name": "Sleep Quality Prediction",
+    "version": "1.0.0",
+    "framework": "TensorFlow",
+    "mae": 0.21800507605075836,
+    "r2": 0.846245288848877,
+    "accuracy": 96.06571552096844
+}
