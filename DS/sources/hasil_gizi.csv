@@ -1,0 +1,119 @@
+﻿nama,kalori,lemak,karbohidrat,protein
+Nasi Putih,129,"0,28g","27,9g","2,66g"
+Nasi Merah,110,"0,89g","22,78g","2,56g"
+Lontong,130,"0,2g","28,58g","2,49g"
+Lontong Sayur,357,"8,39g","59,1g","11,11g"
+Ketupat,160,"2,42g","30,36g","3,27g"
+Nasi Goreng Ayam,329,"11,96g","41,82g","12,45g"
+Nasi Goreng Udang,321,"11,6g","41,88g","10,95g"
+Nasi Goreng Udang,321,"11,6g","41,88g","10,95g"
+Nasi Goreng Spesial,230,13g,22g,7g
+Nasi Uduk,260,"12,95g","32,84g","4,07g"
+Nasi Kuning,150,"0,27g","32,96g","2,99g"
+Nasi Padang Rendang,980,55g,95g,28g
+Nasi Padang Ayam Bakar,689,"24,08g","72,06g","44,11g"
+Nasi Padang Rendang,980,55g,95g,28g
+Bubur Ayam,372,"12,39g","36,12g","27,56g"
+Bubur Kacang Hijau,108,"3,06g","17,76g","3,54g"
+Bubur Ketan Hitam,241,"5,39g","45,37g","2,97g"
+Bubur Manado,349,"7,63g","61,67g","10,51g"
+Nasi Liwet,138,"2,72g","25,94g","2,74g"
+Ayam Goreng,260,"14,55g","10,76g","21,93g"
+"Daging Ayam (Panggang, Bakar, Dimasak)",167,"6,63g",0g,"25,01g"
+"Daging Ayam (Panggang, Bakar, Dimasak)",167,"6,63g",0g,"25,01g"
+Ayam Geprek,263,"17,99g","7,6g","17,61g"
+Opor Ayam,163,"8,67g","5,6g","16,53g"
+Gulai Ayam,202,"14,88g",4g,"14,33g"
+Kari Ayam,160,"8,6g","6,11g","14,8g"
+Soto Ayam,312,"14,92g","19,55g","24,01g"
+Ayam Penyet,199,"8,53g","5,29g","25,05g"
+Ayam Kecap,223,"11,96g","9,41g","18,82g"
+Sate Ayam,34,"2,22g","0,73g","2,93g"
+Sup Ayam,75,"2,46g","9,35g","4,05g"
+Bebek Goreng,337,"28,44g","4,32g","15,39g"
+Bebek Bakar,471,"38,84g",0g,"28,13g"
+Rendang,195,"11,07g","4,49g","19,68g"
+Sate Kambing,32,"2,11g","0,72g","2,84g"
+Bakso Daging Sapi,57,"3,69g","2,12g","3,47g"
+Semur Daging,141,8g,"4,34g","12,7g"
+Sate Padang,161,"6,63g","6,79g","18,01g"
+Soto Betawi,135,"8,85g","11,44g","4,05g"
+Gulai Kambing,125,"9,6g","6,44g","4,71g"
+Gulai Daging Sapi,109,"4,63g","3,02g","13,2g"
+Tongseng,169,"11,83g","6,43g","10,81g"
+Lele Goreng,105,"2,85g",0g,"18,47g"
+Ikan Bawal Goreng,113,"2,69g",0g,"20,78g"
+Ikan Bawal Bakar,144,"5,04g",0g,23g
+Ikan Mujair Goreng,169,"6,92g","2,22g","24,55g"
+Ikan Gurame,125,"5,49g",0g,"17,48g"
+Ikan Gurame Asam Manis,194,"10,16g","12,44g","12,54g"
+Ikan Patin Goreng,126,"6,55g",0g,"15,75g"
+Ikan Patin Bakar,144,"6,61g","2,22g","17,78g"
+"Nila (Ikan) (Dimasak, Panas Kering)",128,"2,65g",0g,"26,15g"
+Ikan Tongkol Balado,202,"4,68g","2,8g","35,21g"
+Ikan Tongkol Goreng,200,"11,41g","2,38g","20,95g"
+Pepes Tongkol,105,"1,27g","7,1g","15,93g"
+Cumi Goreng,125,"2,17g","9,9g","15,13g"
+Cumi Saus Padang,160,"8,02g","7,12g","14,67g"
+Sambal Cumi,125,"6,02g","4,33g","12,89g"
+Cumi Hitam,278,"13,18g","14,86g","24,34g"
+Udang Goreng,287,"14,64g","27,57g","10,58g"
+Udang Goreng Tepung,245,"12,26g","11,77g","20,7g"
+Udang Asam Manis,269,"16,84g","25,12g","6,56g"
+Udang Panggang,154,"5,03g","1,17g","24,47g"
+Ikan Asin,195,"1,59g",0g,"42,16g"
+Ikan Teri,210,"9,71g",0g,"28,89g"
+Kepiting,101,"1,76g",0g,"20,03g"
+Rawon,119,"7,4g","3,48g","9,6g"
+Tempe Goreng,34,"2,28g","1,79g",2g
+Tahu Goreng,35,"2,62g","1,36g","2,23g"
+Tempe Bacem,49,"3,1g","2,23g","3,73g"
+Tahu Bacem,24,"1,47g","1,09g","1,9g"
+Sayur Lodeh,162,"9,47g","14,73g","6,66g"
+Sayur Asem,80,"2,76g","12,9g","3,18g"
+Sayur Bening Bayam,36,"0,37g","7,64g","1,79g"
+Tumis Kangkung,98,"8,71g","3,99g","2,56g"
+Sayur Tahu Toge,86,"1,93g","12,91g","5,93g"
+Sayur Nangka,57,"0,4g","11,3g",2g
+Cap Cay Kuah,67,"2,59g","9,67g","1,58g"
+Tumis Buncis,65,"3,45g","8,15g","1,97g"
+Lalapan,46,"0,7g","9,75g","2,05g"
+Urap,112,"7,65g","10,89g","2,32g"
+Kol Goreng,90,"4,72g","10,62g","2,76g"
+Bakmi Goreng,610,17g,88g,27g
+Bakmi Kuah Cha Cha,480,20g,56g,19g
+Mie Kocok,388,"16,52g","40,72g","20,81g"
+Soto Mie,370,"13,75g","39,75g","21,05g"
+Mie Ayam,421,"18,74g","46,21g","16,7g"
+Kwetiau Goreng,210,9g,26g,7g
+Bihun Goreng,152,"5,68g","18,26g","5,91g"
+Bihun Goreng Ayam,455,"17,04g","54,79g","17,73g"
+Risoles,96,"3,75g","8,66g","6,33g"
+Lemper,133,"5,59g","14,91g","5,98g"
+Pastel,150,"6,13g","19,63g","3,8g"
+Martabak Telur,185,"7,68g","18,52g","9,9g"
+Martabak Manis,270,"11,31g","37,37g","7,01g"
+Pisang Goreng,68,"3,58g","9,74g","0,4g"
+Bakwan,137,"11,59g","6,74g","1,99g"
+Bakso Goreng,57,"3,77g","2,39g","3,22g"
+Tahu Bulat,35,"2,6g","0,68g","2,36g"
+Mi Goreng,380,17g,49g,"7,2g"
+Rasa Ayam Bawang,310,11g,43g,7g
+Rasa Soto Mie,320,13g,44g,7g
+Mi Goreng Aceh,430,19g,55g,9g
+Kari Ayam,330,14g,43g,7g
+Mie Rebus,300,11g,43g,7g
+Mi Goreng Rendang,440,20g,57g,8g
+Mi Goreng Jumbo,540,23g,74g,11g
+Mie Nyemek Bangladesh,380,16g,50g,7g
+Mi Goreng Ayam Geprek,410,19g,52g,8g
+Sambal Goreng,15,"0,41g","1,56g","1,37g"
+Sambal Pedas,35,2g,4g,1g
+Sambal Terasi Uleg,50,3g,6g,1g
+Sambal Rawit,25,"1,5g",3g,1g
+Sambal Terasi,15,"0,5g",2g,0g
+Sambal Terasi Rebus,73,"3,05g","11,02g","1,84g"
+Sambal Matah,21,"1,54g","1,79g","0,44g"
+Sambal Bawang,30,"2,5g",1g,0g
+Sambal Ijo,45,3g,4g,1g
+Sambal Geprek,25,"1,5g",2g,0g
