@@ -48,10 +48,10 @@ FS/
   README.md
 
 DS/
-  notebooks/
-  pipelines/
+  dashboard/
   datasets/
-  feature_engineering/
+  notebook/
+  sources/
   README.md
 
 .gitignore
