@@ -1,5 +1,5 @@
 {
-    "model_name": "Sleep Quality Prediction",
+    "model_name": "GizGoat Sleep Quality Regression Model",
     "version": "1.0.0",
     "framework": "TensorFlow",
     "mae": 0.21800507605075836,
