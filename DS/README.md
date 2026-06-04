@@ -120,7 +120,7 @@ pip install -r requirements.txt
 jupyter notebook notebook/
 ```
 
-Buka notebook yang relevan sesuai tahap pipeline yang ingin dijalankan.
+Buka notebook yang relevan sesuai tahap yang ingin dijalankan.
 
 ---
 
