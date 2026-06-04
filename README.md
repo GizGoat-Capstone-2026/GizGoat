@@ -44,7 +44,6 @@ AI/
 FS/
   frontend/
   backend/
-  deployment/
   README.md
 
 DS/
