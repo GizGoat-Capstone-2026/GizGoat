@@ -13,6 +13,11 @@ class SleepRequest(BaseModel):
     Heart_Rate: int
     Systolic_BP: int
     Diastolic_BP: int
+    Gender: str
+    Age: int
+    Physical_Activity_Level: int
+    BMI_Category: str
+    Sleep_Disorder: str
 
 
 class SleepResponse(BaseModel):

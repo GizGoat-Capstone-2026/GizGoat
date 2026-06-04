@@ -34,6 +34,14 @@ Model Deep Learning untuk memprediksi kualitas tidur berdasarkan indikator keseh
 * Systolic Blood Pressure
 * Diastolic Blood Pressure
 
+Additional categorical/numeric features required by the deployed model (must be provided in the request):
+
+* Gender (string, e.g. "Male" or "Female")
+* Age (int)
+* Physical Activity Level (int)
+* BMI Category (string, e.g. "Normal", "Overweight", "Obese")
+* Sleep Disorder (string, e.g. "Healthy", "Insomnia", "Sleep Apnea")
+
 #### Output
 
 * Sleep Quality Score
@@ -149,7 +157,10 @@ artifacts/
 ├── target_scaler.pkl
 ├── occupation_encoder.pkl
 ├── occupation_mapping.pkl
-└── feature_columns.pkl
+├── feature_columns.pkl
+├── gender_encoder.pkl
+├── bmi_encoder.pkl
+└── sleepdisorder_encoder.pkl
 
 metadata/
 └── model_metadata.json
@@ -177,6 +188,9 @@ AI/
 │   ├── feature_scaler.pkl
 │   ├── occupation_encoder.pkl
 │   ├── occupation_mapping.pkl
+│   ├── gender_encoder.pkl
+│   ├── bmi_encoder.pkl
+│   ├── sleepdisorder_encoder.pkl
 │   └── target_scaler.pkl
 │
 ├── data/
@@ -192,6 +206,9 @@ AI/
 │
 ├── notebooks/
 │   └── GizGoat_Healthy_Living_AI.ipynb
+│
+├── scripts/
+│   └── create_encoders.py
 │
 ├── README.md
 └── requirements.txt
@@ -212,6 +229,7 @@ AI/
 | `notebooks/`                 | Notebook eksperimen, training, dan evaluasi model             |
 | `requirements.txt`           | Daftar dependency project                                     |
 | `README.md`                  | Dokumentasi AI Service                                        |
+| `scripts/`                   | Utility scripts (create encoders, preprocessing helpers)      |
 
 ---
 
@@ -237,6 +255,13 @@ Service akan berjalan pada:
 
 ```text
 http://127.0.0.1:8000
+```
+
+Jika artefak `gender_encoder.pkl`, `bmi_encoder.pkl`, atau `sleepdisorder_encoder.pkl` belum ada di `artifacts/`, jalankan skrip pembuatan encoder sebelum menjalankan server:
+
+```bash
+python scripts/create_encoders.py
+uvicorn api.main:app --reload
 ```
 
 ---
@@ -292,7 +317,12 @@ POST /predict/sleep
   "Daily_Steps": 5000,
   "Heart_Rate": 72,
   "Systolic_BP": 120,
-  "Diastolic_BP": 80
+  "Diastolic_BP": 80,
+  "Gender": "Male",
+  "Age": 30,
+  "Physical_Activity_Level": 60,
+  "BMI_Category": "Normal",
+  "Sleep_Disorder": "Healthy"
 }
 ```
 
