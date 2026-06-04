@@ -102,7 +102,7 @@ sources/         →   notebook/         →   datasets/        →   AI/data/
 - Python 3.9+
 - Jupyter Notebook / JupyterLab
 
-### Install Dependencies
+### Install Requirement
 
 ```bash
 cd DS
