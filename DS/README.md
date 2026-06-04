@@ -131,18 +131,6 @@ Buka notebook yang relevan sesuai tahap pipeline yang ingin dijalankan.
 
 ---
 
-## 📌 Status
-
-| Komponen | Status |
-|---|---|
-| Data Collection | 🔄 In Progress |
-| EDA & Visualisasi | 🔄 In Progress |
-| Preprocessing Pipeline | 🔄 In Progress |
-| Feature Engineering | 🔄 In Progress |
-| Dataset Final | 🔄 In Progress |
-
----
-
 ## 👥 Tim Data Science
 
 Bagian ini dikelola oleh tim Data Science GizGoat dalam kerangka Capstone Project 2026.
