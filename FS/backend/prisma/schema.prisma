@@ -1,0 +1,174 @@
+// GizGOAT — Database Schema
+// 6 models: User, BmiRecord, CalorieLog, SleepRecord, ActivityLog, Recommendation
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ═══════════════════════════════════════
+// USERS — Data profil pengguna
+// ═══════════════════════════════════════
+model User {
+  id               Int       @id @default(autoincrement())
+  name             String    @db.VarChar(100)
+  email            String    @unique @db.VarChar(100)
+  password         String    @db.VarChar(255)
+  age              Int?
+  gender           Gender?
+  height           Float?
+  weight           Float?
+  occupation       String?   @db.VarChar(50)
+  dailyStepsTarget Int       @default(8000) @map("daily_steps_target")
+  dailyCalorieTarget Int?    @map("daily_calorie_target")
+  dailyCarbsTarget   Int?    @map("daily_carbs_target")
+  dailyProteinTarget Int?    @map("daily_protein_target")
+  dailyFatTarget     Int?    @map("daily_fat_target")
+  avatarUrl        String?   @db.Text @map("avatar_url")
+  createdAt        DateTime  @default(now()) @map("created_at")
+  updatedAt        DateTime  @updatedAt @map("updated_at")
+
+  // Relations
+  bmiRecords      BmiRecord[]
+  calorieLogs     CalorieLog[]
+  sleepRecords    SleepRecord[]
+  activityLogs    ActivityLog[]
+  recommendations Recommendation[]
+  notifications   Notification[]
+
+  @@map("users")
+}
+
+enum Gender {
+  male
+  female
+}
+
+// ═══════════════════════════════════════
+// BMI RECORDS — Riwayat perhitungan BMI
+// ═══════════════════════════════════════
+model BmiRecord {
+  id         Int      @id @default(autoincrement())
+  userId     Int      @map("user_id")
+  bmi        Float
+  category   String   @db.VarChar(20)
+  height     Float
+  weight     Float
+  recordedAt DateTime @default(now()) @map("recorded_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("bmi_records")
+}
+
+// ═══════════════════════════════════════
+// CALORIE LOGS — Log makanan harian
+// ═══════════════════════════════════════
+model CalorieLog {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @map("user_id")
+  foodName  String   @db.VarChar(100) @map("food_name")
+  portion   Float?
+  calories  Float
+  carbs     Float?
+  protein   Float?
+  fat       Float?
+  date      DateTime @db.Date
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("calorie_logs")
+}
+
+// ═══════════════════════════════════════
+// SLEEP RECORDS — Data tidur harian
+// ═══════════════════════════════════════
+model SleepRecord {
+  id            Int      @id @default(autoincrement())
+  userId        Int      @map("user_id")
+  bedTime       DateTime @map("bed_time")
+  wakeTime      DateTime @map("wake_time")
+  duration      Float
+  qualityRating Int      @map("quality_rating")
+  qualityScore  String   @db.VarChar(20) @map("quality_score")
+  aiSleepScore  Float?   @map("ai_sleep_score")
+  date          DateTime @db.Date
+  createdAt     DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("sleep_records")
+}
+
+// ═══════════════════════════════════════
+// ACTIVITY LOGS — Data aktivitas harian
+// ═══════════════════════════════════════
+model ActivityLog {
+  id             Int      @id @default(autoincrement())
+  userId         Int      @map("user_id")
+  steps          Int
+  activityType   String   @db.VarChar(50) @map("activity_type")
+  duration       Int
+  caloriesBurned Float    @map("calories_burned")
+  distanceKm     Float    @map("distance_km")
+  targetAchieved Boolean  @default(false) @map("target_achieved")
+  date           DateTime @db.Date
+  createdAt      DateTime @default(now()) @map("created_at")
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("activity_logs")
+}
+
+// ═══════════════════════════════════════
+// RECOMMENDATIONS — Cache rekomendasi
+// ═══════════════════════════════════════
+model Recommendation {
+  id          Int      @id @default(autoincrement())
+  userId      Int      @map("user_id")
+  healthScore Int      @map("health_score")
+  zone        String   @db.VarChar(20)
+  dietRec     String   @db.Text @map("diet_rec")
+  sleepRec    String   @db.Text @map("sleep_rec")
+  activityRec String   @db.Text @map("activity_rec")
+  generatedAt DateTime @default(now()) @map("generated_at")
+
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@map("recommendations")
+}
+
+model Notification {
+  id        String   @id @default(uuid())
+  userId    Int      @map("user_id")
+  title     String
+  message   String
+  type      String   @default("INFO") @db.VarChar(50)
+  isRead    Boolean  @default(false) @map("is_read")
+  createdAt DateTime @default(now()) @map("created_at")
+
+  user      User     @relation(fields: [userId], references: [id])
+
+  @@map("notifications")
+}
+
+// ═══════════════════════════════════════
+// FOODS — Data nutrisi makanan dari CSV
+// ═══════════════════════════════════════
+model Food {
+  id        Int      @id @default(autoincrement())
+  name      String   @db.VarChar(100)
+  calories  Float
+  fat       Float
+  carbs     Float
+  protein   Float
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("foods")
+}

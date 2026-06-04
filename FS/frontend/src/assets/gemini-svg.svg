@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%">
+  <!-- Latar Belakang Rounded -->
+  <rect width="120" height="120" rx="24" fill="#0f172a" />
+  
+  <!-- Tanduk Kiri (Digital Style) -->
+  <path d="M 35 45 L 35 25 L 50 25" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Tanduk Kanan (Digital Style) -->
+  <path d="M 85 45 L 85 25 L 70 25" fill="none" stroke="#10b981" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Wajah Kambing / Bentuk Shield -->
+  <path d="M 35 45 L 85 45 L 85 70 C 85 90 60 100 60 100 C 60 100 35 90 35 70 Z" fill="#10b981" />
+  
+  <!-- Mata Digital -->
+  <rect x="47" y="55" width="8" height="12" rx="4" fill="#0f172a" />
+  <rect x="65" y="55" width="8" height="12" rx="4" fill="#0f172a" />
+</svg>
