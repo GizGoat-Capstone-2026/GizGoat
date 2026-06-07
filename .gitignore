@@ -18,3 +18,7 @@ venv/
 *.h5
 
 *.tmp
+
+# VS Code & Pyright local config
+AI/.vscode/
+AI/pyrightconfig.json

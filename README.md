@@ -115,6 +115,6 @@ Aplikasi dapat diakses melalui environment deployment yang telah dikonfigurasi.
 
 ## 🚀 Status proyek
 
-- AI System → in development
-- Fullstack System → in development
-- Data Pipeline → in development
+- AI System → Completed
+- Fullstack System → Completed
+- Data Pipeline → Completed
