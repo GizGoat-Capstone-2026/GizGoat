@@ -18,13 +18,77 @@ Ketiga domain berjalan secara independen namun tetap terhubung melalui kontrak A
 
 ## 🏗️ Arsitektur sistem
 
-GizGoat menggunakan pendekatan monorepo berbasis service-oriented architecture, di mana setiap workspace memiliki tanggung jawab yang jelas namun tetap saling terintegrasi.
+GizGoat menggunakan pendekatan **Service-Oriented Architecture** dengan model monorepo yang mengintegrasikan tiga domain utama secara independen namun terhubung.
 
-### Alur sistem utama
+### Diagram Arsitektur Sistem
 
-- `DS/` → menghasilkan dataset bersih, insight, dan feature engineering
-- `AI/` → melatih model dan menyediakan inference service melalui API
-- `FS/` → mengonsumsi API AI untuk ditampilkan dalam aplikasi pengguna
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    PRESENTATION LAYER                           │
+│                 🌐 Frontend - React + Vite                      │
+│            (Pages, Components, Services, State Mgmt)            │
+└────────────────────────┬────────────────────────────────────────┘
+                         │ HTTP/REST
+                         ▼
+┌───────────────────────────────────────────────────────────────────┐
+│                      API GATEWAY LAYER                            │
+│              🖥️ Backend - Node.js + Express                       │
+│      (Controllers, Routes, Middleware, Auth, Validation)          │
+│                  Database: PostgreSQL                             │
+└────────────────┬──────────────────────────┬───────────────────────┘
+                 │ REST API Calls           │
+    ┌────────────▼───────────────┐          │
+    │   🤖 AI SERVICES LAYER    │          │
+    │  (FastAPI + TensorFlow)    │          │
+    ├────────────────────────────┤          │
+    │ • Sleep Quality Service    │          │
+    │ • BMI Calculator Service   │          │
+    │ • Calorie Estimation       │          ▼
+    │ • Nutrition Analysis       │    ┌──────────────────┐
+    │ • Recommendation Engine    │    │ DATA STORAGE     │
+    └─────────────┬──────────────┘    │ (Prisma ORM)     │
+                  │                   │ - Users          │
+                  │                   │ - Activities     │
+    ┌─────────────▼────────────┐      │ - Recommendations│
+    │  🧠 ML MODELS & DATA     │      │ - Health Records │
+    │  (Keras/TensorFlow)      │      └──────────────────┘
+    ├──────────────────────────┤
+    │ Models:                  │
+    │ • Sleep Quality Model    │
+    │ • Lifestyle Model        │
+    │                          │
+    │ Datasets:                │
+    │ • Lifestyle Data         │
+    │ • Nutrition Data         │
+    └──────────────────────────┘
+                  ▲
+    ┌─────────────┴────────────┐
+    │  📊 DATA SCIENCE LAYER   │
+    ├──────────────────────────┤
+    │ • Streamlit Dashboard    │
+    │ • Data Notebooks         │
+    │ • Data Processors        │
+    │ • Feature Engineering    │
+    └──────────────────────────┘
+```
+
+### Alur Data Sistem
+
+1. **User Interaction** → Frontend mengirimkan data user ke Backend
+2. **Data Processing** → Backend menerima, validasi, dan proses data
+3. **AI Inference** → Backend memanggil AI Services untuk prediksi
+4. **Model Prediction** → AI Services menggunakan ML Models untuk hasil
+5. **Data Persistence** → Backend menyimpan hasil ke Database
+6. **Response to User** → Frontend menampilkan rekomendasi kepada user
+7. **Analytics** → Data Science team monitor metrics via Dashboard
+
+### Tanggung Jawab Setiap Domain
+
+| Domain | Peran | Output |
+|--------|-------|--------|
+| **DS/** | Data Collection, Cleaning, Exploration | Clean datasets, Feature engineering, Insights |
+| **AI/** | Model Training, Inference Services | REST API endpoints, Trained models |
+| **FS/** | User-facing Application | Web UI, REST API Gateway, Authentication |
 
 ---
 
@@ -102,14 +166,6 @@ Aplikasi dapat diakses melalui environment deployment yang telah dikonfigurasi.
 - AI menggunakan output dari DS sebagai input training pipeline
 - DS menghasilkan dataset yang telah divalidasi untuk AI
 - Semua komunikasi mengikuti schema data yang terstandarisasi
-
----
-
-## 👥 Pembagian tanggung jawab
-
-- **AI System** → model training, inference API, optimasi performa, MLOps
-- **Fullstack System** → UI/UX, backend services, authentication, deployment
-- **Data Science System** → data pipeline, eksperimen, feature engineering, analisis
 
 ---
 
